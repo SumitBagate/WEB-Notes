@@ -31,8 +31,8 @@ jobs:
 
       - name: Build Quartz
         working-directory: quartz
-        run: npx quartz build
-
+        run: npm run build
+  
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
