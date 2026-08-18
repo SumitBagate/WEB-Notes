@@ -7,7 +7,7 @@ configuration:
   analytics:
     provider: plausible
   locale: en-US
-  baseUrl: DSA_notes.github.io/quartz
+  baseUrl: sumitbagate.github.io/WEB-Notes
   ignorePatterns:
     - private
     - templates
