@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Setup Node.js
@@ -29,9 +29,13 @@ jobs:
         working-directory: quartz
         run: npm ci
 
+      - name: Fix Quartz CLI permissions
+        working-directory: quartz
+        run: chmod +x node_modules/.bin/quartz
+
       - name: Build Quartz
         working-directory: quartz
-        run: npx tsx quartz.ts build
+        run: npx quartz build
 
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v5
