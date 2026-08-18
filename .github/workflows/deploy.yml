@@ -2,7 +2,8 @@ name: Deploy Quartz to GitHub Pages
 
 on:
   push:
-    branches: ["main"]
+    branches:
+      - main
   workflow_dispatch:
 
 permissions:
@@ -29,21 +30,15 @@ jobs:
         working-directory: quartz
         run: npm ci
 
-      - name: Inspect Quartz package
-        working-directory: quartz
-        run: |
-          node -p "require('./package.json').bin"
-          npm exec --yes quartz -- --help
-
       - name: Build Quartz
         working-directory: quartz
-        run: npm exec --yes quartz -- build
+        run: npx quartz build
 
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v5
 
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: quartz/public
 
