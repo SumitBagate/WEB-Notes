@@ -1,3 +1,636 @@
 @use "./variables.scss" as *;
 
 // put your custom CSS here!
+@use "./variables.scss" as *;
+
+/* =========================================================
+   GITHUB-STYLE QUARTZ THEME
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   GitHub color variables
+   --------------------------------------------------------- */
+
+:root {
+  --github-bg: #ffffff;
+  --github-bg-secondary: #f6f8fa;
+  --github-bg-tertiary: #f0f2f4;
+
+  --github-border: #d0d7de;
+  --github-border-muted: #d8dee4;
+
+  --github-text: #1f2328;
+  --github-text-muted: #656d76;
+  --github-text-faint: #818b98;
+
+  --github-blue: #0969da;
+  --github-blue-hover: #0550ae;
+
+  --github-green: #1a7f37;
+  --github-green-bg: #dafbe1;
+
+  --github-red: #cf222e;
+  --github-orange: #bc4c00;
+
+  --github-code-bg: #f6f8fa;
+
+  --github-radius: 6px;
+}
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+
+:root[saved-theme="dark"] {
+  --github-bg: #0d1117;
+  --github-bg-secondary: #161b22;
+  --github-bg-tertiary: #21262d;
+
+  --github-border: #30363d;
+  --github-border-muted: #21262d;
+
+  --github-text: #e6edf3;
+  --github-text-muted: #8b949e;
+  --github-text-faint: #6e7681;
+
+  --github-blue: #58a6ff;
+  --github-blue-hover: #79c0ff;
+
+  --github-green: #3fb950;
+  --github-green-bg: #1a7f37;
+
+  --github-red: #f85149;
+  --github-orange: #d29922;
+
+  --github-code-bg: #161b22;
+}
+
+/* =========================================================
+   BODY
+   ========================================================= */
+
+body {
+  background: var(--github-bg);
+  color: var(--github-text);
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Noto Sans",
+    Helvetica,
+    Arial,
+    sans-serif;
+
+  line-height: 1.5;
+}
+
+/* =========================================================
+   MAIN PAGE
+   ========================================================= */
+
+.page {
+  background: var(--github-bg);
+}
+
+main {
+  color: var(--github-text);
+}
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
+a {
+  color: var(--github-blue);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--github-blue-hover);
+  text-decoration: underline;
+}
+
+/* =========================================================
+   HEADINGS
+   ========================================================= */
+
+article h1,
+article h2,
+article h3,
+article h4,
+article h5,
+article h6 {
+  color: var(--github-text);
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Noto Sans",
+    Helvetica,
+    Arial,
+    sans-serif;
+
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+article h1 {
+  font-size: 2em;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--github-border);
+}
+
+article h2 {
+  font-size: 1.5em;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--github-border-muted);
+}
+
+article h3 {
+  font-size: 1.25em;
+}
+
+article h4 {
+  font-size: 1em;
+}
+
+/* =========================================================
+   ARTICLE
+   ========================================================= */
+
+article {
+  color: var(--github-text);
+  font-size: 16px;
+}
+
+/* =========================================================
+   PARAGRAPHS
+   ========================================================= */
+
+article p {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+/* =========================================================
+   BOLD / ITALIC
+   ========================================================= */
+
+strong {
+  color: var(--github-text);
+  font-weight: 600;
+}
+
+/* =========================================================
+   INLINE CODE
+   ========================================================= */
+
+code:not(pre code) {
+  padding: 0.2em 0.4em;
+  margin: 0;
+  font-size: 85%;
+
+  background: var(--github-code-bg);
+  border: 1px solid var(--github-border-muted);
+  border-radius: 6px;
+
+  font-family:
+    ui-monospace,
+    SFMono-Regular,
+    "SF Mono",
+    Menlo,
+    Consolas,
+    "Liberation Mono",
+    monospace;
+
+  color: var(--github-text);
+}
+
+/* =========================================================
+   CODE BLOCKS
+   ========================================================= */
+
+pre {
+  background: var(--github-code-bg) !important;
+  border: 1px solid var(--github-border);
+  border-radius: 6px;
+
+  padding: 16px;
+
+  overflow-x: auto;
+
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+pre code {
+  background: transparent !important;
+  border: none;
+  padding: 0;
+
+  font-family:
+    ui-monospace,
+    SFMono-Regular,
+    "SF Mono",
+    Menlo,
+    Consolas,
+    "Liberation Mono",
+    monospace;
+}
+
+/* =========================================================
+   BLOCKQUOTE
+   ========================================================= */
+
+blockquote {
+  margin: 0 0 16px;
+  padding: 0 1em;
+
+  color: var(--github-text-muted);
+
+  border-left: 0.25em solid var(--github-border);
+}
+
+blockquote p {
+  margin-bottom: 0;
+}
+
+/* =========================================================
+   LISTS
+   ========================================================= */
+
+article ul,
+article ol {
+  padding-left: 2em;
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+article li {
+  margin-top: 0.25em;
+}
+
+article li::marker {
+  color: var(--github-text-muted);
+}
+
+/* =========================================================
+   CHECKBOXES
+   ========================================================= */
+
+input[type="checkbox"] {
+  accent-color: var(--github-green);
+}
+
+input[type="checkbox"]:checked {
+  accent-color: var(--github-green);
+}
+
+/* =========================================================
+   TABLES
+   ========================================================= */
+
+article table {
+  width: 100%;
+
+  border-spacing: 0;
+  border-collapse: collapse;
+
+  margin-top: 0;
+  margin-bottom: 16px;
+
+  overflow: hidden;
+
+  border: 1px solid var(--github-border);
+
+  border-radius: 6px;
+}
+
+article table th,
+article table td {
+  padding: 6px 13px;
+
+  border: 1px solid var(--github-border);
+
+  text-align: left;
+}
+
+article table th {
+  font-weight: 600;
+  background: var(--github-bg-secondary);
+}
+
+article table tr:nth-child(even) {
+  background: var(--github-bg-secondary);
+}
+
+article table tr:hover {
+  background: var(--github-bg-tertiary);
+}
+
+/* =========================================================
+   HORIZONTAL RULE
+   ========================================================= */
+
+article hr {
+  height: 0;
+
+  margin: 24px 0;
+
+  border: 0;
+  border-top: 1px solid var(--github-border);
+}
+
+/* =========================================================
+   IMAGES
+   ========================================================= */
+
+article img {
+  max-width: 100%;
+  height: auto;
+
+  border-radius: 6px;
+}
+
+/* =========================================================
+   SEARCH
+   ========================================================= */
+
+.search {
+  input {
+    background: var(--github-bg-secondary) !important;
+    color: var(--github-text) !important;
+
+    border: 1px solid var(--github-border) !important;
+    border-radius: 6px;
+
+    box-shadow: none;
+  }
+
+  input:focus {
+    border-color: var(--github-blue) !important;
+
+    outline: none;
+
+    box-shadow: 0 0 0 3px rgba(9, 105, 218, 0.2);
+  }
+}
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+aside {
+  color: var(--github-text);
+
+  background: var(--github-bg);
+
+  border-color: var(--github-border);
+}
+
+/* Sidebar links */
+
+aside a {
+  color: var(--github-text);
+}
+
+aside a:hover {
+  color: var(--github-blue);
+  text-decoration: none;
+}
+
+/* =========================================================
+   EXPLORER / FILE NAVIGATION
+   ========================================================= */
+
+.explorer {
+  color: var(--github-text);
+}
+
+.explorer a {
+  color: var(--github-text-muted);
+}
+
+.explorer a:hover {
+  color: var(--github-blue);
+  background: var(--github-bg-secondary);
+  border-radius: 6px;
+}
+
+/* =========================================================
+   PAGE TITLE
+   ========================================================= */
+
+.page-title {
+  color: var(--github-text);
+}
+
+.page-title a {
+  color: var(--github-text);
+  font-weight: 600;
+}
+
+.page-title a:hover {
+  color: var(--github-blue);
+  text-decoration: none;
+}
+
+/* =========================================================
+   BREADCRUMBS
+   ========================================================= */
+
+.breadcrumb-element {
+  color: var(--github-text-muted);
+}
+
+.breadcrumb-element a {
+  color: var(--github-text-muted);
+}
+
+.breadcrumb-element a:hover {
+  color: var(--github-blue);
+}
+
+/* =========================================================
+   TAGS
+   ========================================================= */
+
+a.tag-link {
+  display: inline-block;
+
+  padding: 2px 8px;
+
+  color: var(--github-blue);
+
+  background: var(--github-bg-secondary);
+
+  border: 1px solid var(--github-border);
+
+  border-radius: 20px;
+
+  font-size: 12px;
+}
+
+a.tag-link:hover {
+  color: var(--github-blue-hover);
+
+  background: var(--github-bg-tertiary);
+
+  text-decoration: none;
+}
+
+/* =========================================================
+   CALLOUTS
+   ========================================================= */
+
+.callout {
+  border-radius: 6px;
+  border: 1px solid var(--github-border);
+
+  background: var(--github-bg-secondary);
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+  color: var(--github-text-muted);
+
+  border-top: 1px solid var(--github-border);
+}
+
+footer a {
+  color: var(--github-blue);
+}
+
+/* =========================================================
+   GRAPH
+   ========================================================= */
+
+.graph {
+  border: 1px solid var(--github-border);
+  border-radius: 6px;
+
+  background: var(--github-bg-secondary);
+}
+
+/* =========================================================
+   BACKLINKS
+   ========================================================= */
+
+.backlinks {
+  border-top: 1px solid var(--github-border);
+
+  color: var(--github-text-muted);
+}
+
+/* =========================================================
+   CONTENT META
+   ========================================================= */
+
+.content-meta {
+  color: var(--github-text-muted);
+  font-size: 14px;
+}
+
+/* =========================================================
+   TOC
+   ========================================================= */
+
+.toc {
+  border-left: 1px solid var(--github-border);
+
+  color: var(--github-text-muted);
+}
+
+.toc a {
+  color: var(--github-text-muted);
+}
+
+.toc a:hover {
+  color: var(--github-blue);
+}
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+button {
+  color: var(--github-text);
+
+  background: var(--github-bg-secondary);
+
+  border: 1px solid var(--github-border);
+
+  border-radius: 6px;
+}
+
+button:hover {
+  background: var(--github-bg-tertiary);
+  border-color: var(--github-text-faint);
+}
+
+/* =========================================================
+   SELECTION
+   ========================================================= */
+
+::selection {
+  background: rgba(88, 166, 255, 0.25);
+}
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color:
+    var(--github-border)
+    var(--github-bg);
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--github-bg);
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--github-border);
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: var(--github-text-faint);
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media all and (max-width: 800px) {
+  article {
+    font-size: 16px;
+  }
+
+  article h1 {
+    font-size: 1.7em;
+  }
+
+  article h2 {
+    font-size: 1.4em;
+  }
+
+  article table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  aside {
+    border-bottom: 1px solid var(--github-border);
+  }
+}
