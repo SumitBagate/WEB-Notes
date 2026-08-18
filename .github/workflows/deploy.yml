@@ -29,13 +29,15 @@ jobs:
         working-directory: quartz
         run: npm ci
 
-      - name: Fix Quartz CLI permissions
+      - name: Inspect Quartz package
         working-directory: quartz
-        run: chmod +x node_modules/.bin/quartz
+        run: |
+          node -p "require('./package.json').bin"
+          npm exec --yes quartz -- --help
 
       - name: Build Quartz
         working-directory: quartz
-        run: npx quartz build
+        run: npm exec --yes quartz -- build
 
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v5
