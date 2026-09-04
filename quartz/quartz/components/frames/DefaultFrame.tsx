@@ -23,6 +23,59 @@ export const DefaultFrame: PageFrame = {
   }: PageFrameProps) {
     return (
       <>
+        <nav class="panel-toolbar" aria-label="Page panels">
+          <button
+            class="panel-toggle panel-toggle-left"
+            type="button"
+            aria-label="Show Explorer"
+            title="Show Explorer"
+            aria-expanded="true"
+          >
+            <span class="panel-toggle-icon" aria-hidden="true">
+              ☰
+            </span>
+          </button>
+          <span class="panel-toolbar-title">{componentData.cfg.pageTitle ?? "Note"}</span>
+          <button
+            class="panel-toggle panel-toggle-right"
+            type="button"
+            aria-label="Show graph and table of contents"
+            title="Show graph and table of contents"
+            aria-expanded="true"
+          >
+            <span class="panel-toggle-icon" aria-hidden="true">
+              ☰
+            </span>
+          </button>
+        </nav>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(() => {
+              const body = document.querySelector("#quartz-body")
+              const left = document.querySelector(".panel-toggle-left")
+              const right = document.querySelector(".panel-toggle-right")
+              if (!body || !left || !right) return
+
+              const setExpanded = (button, expanded) => button.setAttribute("aria-expanded", String(expanded))
+              left.addEventListener("click", () => {
+                const mobileExplorer = document.querySelector(".explorer button.mobile-explorer")
+                if (mobileExplorer && window.matchMedia("(max-width: 800px)").matches) {
+                  mobileExplorer.click()
+                  setExpanded(left, !body.classList.contains("lock-scroll"))
+                  return
+                }
+                const hidden = body.classList.toggle("panel-left-hidden")
+                setExpanded(left, !hidden)
+              })
+              right.addEventListener("click", () => {
+                const hidden = body.classList.contains("panel-graph-hidden")
+                body.classList.toggle("panel-graph-hidden", !hidden)
+                body.classList.toggle("panel-toc-hidden", !hidden)
+                setExpanded(right, hidden)
+              })
+            })()`,
+          }}
+        />
         <div class="left sidebar">
           {left.map((BodyComponent) => (
             <BodyComponent {...componentData} />
@@ -57,6 +110,17 @@ export const DefaultFrame: PageFrame = {
         {footer.map((FooterComponent) => (
           <FooterComponent {...componentData} />
         ))}
+        <footer class="site-footer">
+          <p>Created by Sumit</p>
+          <ul>
+            <li>
+              <a href="https://github.com/SumitBagate">GitHub</a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/sumit-bagate-97871b296">LinkedIn</a>
+            </li>
+          </ul>
+        </footer>
       </>
     )
   },

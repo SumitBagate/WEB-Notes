@@ -1,4 +1,3 @@
-# Week 1 — Arrays
 
 **Day 1**
 
@@ -25,7 +24,7 @@
 - [ ]  Merge Sorted Arrays Without Extra Space
 
 **Day 5**
-
+l
 - [ ]  3Sum
 - [ ]  4Sum
 - [ ]  Count Subarrays With Given Sum

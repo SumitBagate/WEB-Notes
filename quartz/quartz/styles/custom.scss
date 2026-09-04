@@ -73,13 +73,7 @@ body {
   background: var(--github-bg);
   color: var(--github-text);
   font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    "Noto Sans",
-    Helvetica,
-    Arial,
-    sans-serif;
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
 
   line-height: 1.5;
 }
@@ -122,13 +116,7 @@ article h5,
 article h6 {
   color: var(--github-text);
   font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    "Noto Sans",
-    Helvetica,
-    Arial,
-    sans-serif;
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
 
   font-weight: 600;
   line-height: 1.25;
@@ -195,13 +183,7 @@ code:not(pre code) {
   border-radius: 6px;
 
   font-family:
-    ui-monospace,
-    SFMono-Regular,
-    "SF Mono",
-    Menlo,
-    Consolas,
-    "Liberation Mono",
-    monospace;
+    ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
 
   color: var(--github-text);
 }
@@ -229,13 +211,7 @@ pre code {
   padding: 0;
 
   font-family:
-    ui-monospace,
-    SFMono-Regular,
-    "SF Mono",
-    Menlo,
-    Consolas,
-    "Liberation Mono",
-    monospace;
+    ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
 }
 
 /* =========================================================
@@ -417,6 +393,47 @@ aside a:hover {
   border-radius: 6px;
 }
 
+.sidebar.left .explorer {
+  min-height: 32px;
+  overflow: visible;
+  width: calc(100% + 0.5rem);
+  margin-left: -0.5rem;
+}
+
+.sidebar.left .explorer.collapsed {
+  flex: 0 0 32px;
+  height: 32px;
+  min-height: 32px;
+  overflow: visible;
+}
+
+.sidebar.left .explorer button.desktop-explorer,
+.sidebar.left .explorer button.mobile-explorer {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 32px;
+  padding: 4px 6px;
+  justify-content: center;
+}
+
+.sidebar.left .darkmode,
+.sidebar.left .readermode {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+}
+
+.sidebar.left .darkmode svg,
+.sidebar.left .readermode svg {
+  position: static;
+  width: 20px;
+  height: 20px;
+}
+
 /* =========================================================
    PAGE TITLE
    ========================================================= */
@@ -509,6 +526,9 @@ footer a {
    ========================================================= */
 
 .graph {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
   border: 1px solid var(--github-border);
   border-radius: 6px;
 
@@ -520,7 +540,7 @@ footer a {
    ========================================================= */
 
 .backlinks {
-  border-top: 1px solid var(--github-border);
+  border-top: 0;
 
   color: var(--github-text-muted);
 }
@@ -552,6 +572,35 @@ footer a {
   color: var(--github-blue);
 }
 
+.sidebar.right .toc {
+  min-height: 32px;
+  overflow: visible;
+}
+
+.sidebar.right .toc:has(button.toc-header.collapsed) {
+  flex: 0 0 32px;
+  height: 32px;
+  min-height: 32px;
+  overflow: visible;
+}
+
+.sidebar.right button.toc-header {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 32px;
+  padding: 4px 10px;
+  justify-content: center;
+  border: 1px solid var(--github-border);
+  border-radius: 6px;
+  background: var(--github-bg-tertiary);
+  color: var(--github-text);
+}
+
+.sidebar.right button.toc-header:hover {
+  border-color: var(--github-text-faint);
+  background: var(--github-bg-secondary);
+}
+
 /* =========================================================
    BUTTONS
    ========================================================= */
@@ -559,15 +608,38 @@ footer a {
 button {
   color: var(--github-text);
 
-  background: var(--github-bg-secondary);
+  background: var(--github-bg-tertiary);
 
   border: 1px solid var(--github-border);
 
   border-radius: 6px;
+
+  padding: 5px 12px;
+  font: inherit;
+  line-height: 1.4;
+  cursor: pointer;
 }
 
 button:hover {
+  background: var(--github-bg-secondary);
+  border-color: var(--github-text-faint);
+}
+
+.sidebar.left .darkmode,
+.sidebar.left .readermode,
+.sidebar.left .explorer button.desktop-explorer,
+.sidebar.left .explorer button.mobile-explorer {
   background: var(--github-bg-tertiary);
+  border: 1px solid var(--github-border);
+  border-radius: 6px;
+  color: var(--github-text);
+}
+
+.sidebar.left .darkmode:hover,
+.sidebar.left .readermode:hover,
+.sidebar.left .explorer button.desktop-explorer:hover,
+.sidebar.left .explorer button.mobile-explorer:hover {
+  background: var(--github-bg-secondary);
   border-color: var(--github-text-faint);
 }
 
@@ -585,9 +657,7 @@ button:hover {
 
 * {
   scrollbar-width: thin;
-  scrollbar-color:
-    var(--github-border)
-    var(--github-bg);
+  scrollbar-color: var(--github-border) var(--github-bg);
 }
 
 *::-webkit-scrollbar {
@@ -633,4 +703,56 @@ button:hover {
   aside {
     border-bottom: 1px solid var(--github-border);
   }
+}
+
+/* Sidebar divider */
+.sidebar {
+  border-right: 1px solid var(--lightgray);
+  padding-right: 20px;
+}
+
+.sidebar.right {
+  border-right: 0;
+  border-left: 1px solid var(--github-border);
+  padding-left: 8px;
+  padding-right: 0;
+}
+
+/* Main article/content */
+.center {
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-sizing: border-box;
+  min-width: 0;
+  width: 100%;
+  padding: 16px;
+}
+
+@media all and (min-width: 1200px) {
+  #quartz-body > .center {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  #quartz-body.panel-left-hidden.panel-graph-hidden.panel-toc-hidden .center,
+  #quartz-body.panel-left-hidden.panel-graph-hidden.panel-toc-hidden footer {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    padding-left: clamp(1rem, 2vw, 2rem);
+    padding-right: clamp(1rem, 2vw, 2rem);
+  }
+}
+
+@media all and (max-width: 800px) {
+  .sidebar.right {
+    border-left: 0;
+    padding-left: 0;
+  }
+}
+
+/* Search */
+.search {
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
 }
