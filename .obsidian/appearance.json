@@ -1,1 +1,13 @@
-{}
+{
+  "accentColor": "#76736f",
+  "cssTheme": "GitHub Theme",
+  "enabledCssSnippets": [
+    "wide-notes",
+    "dark_theme"
+  ],
+  "interfaceFontFamily": "Karla",
+  "baseFontSize": 16,
+  "baseFontSizeAction": true,
+  "textFontFamily": "Arial Black",
+  "theme": "system"
+}

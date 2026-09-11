@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "quartz/content/Linked_list/Singly linked list/Singly linked list.md",
+                "file": "quartz/content/Binary Tree/Binary Tree.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Singly linked list"
+              "title": "Binary Tree"
             }
           },
           {
@@ -204,6 +204,10 @@
   },
   "active": "71003a695cc650c9",
   "lastOpenFiles": [
+    "quartz/content/Binary_search/BS on 1D Arrays/BS on 1D Arrays.md",
+    "quartz/content/Binary Tree/Binary Tree.md",
+    "quartz/content/Linked_list/Singly linked list/Singly linked list.md",
+    "quartz/content/Binary Tree",
     "quartz/public/tags/index-og-image.webp",
     "quartz/public/two_pointers/index-og-image.webp",
     "quartz/public/linked_list/index-og-image.webp",
@@ -214,7 +218,6 @@
     "quartz/public/two_pointers/two-pointers-og-image.webp",
     "quartz/public/two_pointers/1.longest-substring-without-repeating-characters-og-image.webp",
     "quartz/public/linked_list/singly-linked-list/index-og-image.webp",
-    "quartz/public/linked_list/linked-list-og-image.webp",
     "quartz/public/static/giscus/light.css",
     "quartz/public/static/giscus/dark.css",
     "quartz/public/static/giscus",
@@ -224,7 +227,6 @@
     "quartz/public/favicon.ico",
     "quartz/public/sitemap.xml",
     "quartz/public/CNAME",
-    "quartz/public/static/encryptedContentIndex.json",
     "quartz/content/Linked_list/Linked list.md",
     "quartz/content/plane.md",
     "quartz/content/index.md",
@@ -232,7 +234,6 @@
     "quartz/content/Two_pointers/1.Longest Substring Without Repeating Characters.md",
     "quartz/content/Untitled.md",
     "quartz/content/2026-08-15.md",
-    "quartz/content/Linked_list/Singly linked list/Singly linked list.md",
     "quartz/docs/cli/upgrade.md",
     "quartz/docs/cli/tui.md",
     "quartz/docs/cli/sync.md",
@@ -249,7 +250,6 @@
     "quartz/content/Binary_search/Bs on Answers/Min max/3.Capacity To Ship Packages Within D Days.md",
     "quartz/content/Binary_search/Bs on Answers/Min max/0.Min max.md",
     "quartz/content/Binary_search/Bs on Answers/Min max/1.Aggressive Cows.md",
-    "quartz/content/Binary_search/Bs on Answers/Min max/5.Painter's Partition Problem.md",
-    "quartz/content/Binary_search/Bs on Answers/Min max/6.Median of Two sorted Array.md"
+    "quartz/content/Binary_search/Bs on Answers/Min max/5.Painter's Partition Problem.md"
   ]
 }

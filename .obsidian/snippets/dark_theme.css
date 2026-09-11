@@ -1,0 +1,157 @@
+.theme-dark {
+  --background-primary: #0D1117;
+  --background-primary-alt: #161B22;
+  --background-secondary: #0D1117;
+  --background-secondary-alt: #161B22;
+
+  --text-normal: #E6EDF3;
+  --text-muted: #8B949E;
+  --text-faint: #6E7681;
+
+  --background-modifier-border: #30363D;
+  --background-modifier-hover: #21262D;
+
+  --interactive-accent: #2F81F7;
+  --interactive-accent-hover: #58A6FF;
+ 
+  --nav-item-color: #8B949E;
+  --nav-item-color-hover: #E6EDF3;
+  --nav-item-color-active: #E6EDF3;
+  --icon-color: #8B949E;
+  --icon-color-hover: #E6EDF3;
+  --icon-color-active: #E6EDF3;
+
+}
+/* Sidebar menu text and icons only */
+.theme-dark .workspace-split.mod-left-split .nav-file-title,
+.theme-dark .workspace-split.mod-left-split .nav-folder-title {
+  color: #E6EDF3 !important;
+}
+
+.theme-dark .workspace-split.mod-left-split .nav-file-title .svg-icon,
+.theme-dark .workspace-split.mod-left-split .nav-folder-title .svg-icon {
+  color: #8B949E !important;
+  stroke: #8B949E !important;
+}
+
+.theme-dark .workspace-split.mod-left-split .nav-action-button {
+  color: #8B949E !important;
+}
+
+.theme-dark .workspace-split.mod-left-split .nav-action-button:hover {
+  color: #E6EDF3 !important;
+}
+
+/* Left ribbon icons */
+.theme-dark .side-dock-ribbon .svg-icon {
+  color: #8B949E !important;
+  stroke: #8B949E !important;
+}
+
+.theme-dark .side-dock-ribbon .clickable-icon:hover .svg-icon {
+  color: #E6EDF3 !important;
+  stroke: #E6EDF3 !important;
+}
+/* ===== Settings Panel - GitHub-like text ===== */
+
+/* Settings sidebar */
+.theme-dark .vertical-tab-header {
+  --text-normal: #E6EDF3;
+  --text-muted: #8B949E;
+  --text-faint: #6E7681;
+}
+
+/* Settings sidebar text */
+.theme-dark .vertical-tab-header .vertical-tab-nav-item {
+  color: #E6EDF3 !important;
+}
+
+.theme-dark .vertical-tab-header .vertical-tab-nav-item:hover,
+.theme-dark .vertical-tab-header .vertical-tab-nav-item.is-active {
+  color: #FFFFFF !important;
+}
+
+
+/* Settings content/panel */
+.theme-dark .vertical-tab-content {
+  --text-normal: #E6EDF3;
+  --text-muted: #8B949E;
+  --text-faint: #6E7681;
+}
+
+/* Settings headings */
+.theme-dark .vertical-tab-content .setting-item-name,
+.theme-dark .vertical-tab-content .setting-item-heading,
+.theme-dark .vertical-tab-content h1,
+.theme-dark .vertical-tab-content h2,
+.theme-dark .vertical-tab-content h3 {
+  color: #E6EDF3 !important;
+}
+
+/* Settings descriptions */
+.theme-dark .vertical-tab-content .setting-item-description {
+  color: #8B949E !important;
+}
+
+/* Settings section labels */
+.theme-dark .vertical-tab-content .setting-item-name {
+  color: #E6EDF3 !important;
+}
+/* ===== Other Obsidian UI text ===== */
+
+/* Note breadcrumb/path at the top */
+.theme-dark .view-header-title,
+.theme-dark .view-header-title-container,
+.theme-dark .view-header-breadcrumb,
+.theme-dark .view-header-breadcrumb-separator {
+  color: #E6EDF3 !important;
+}
+
+/* Breadcrumb hover */
+.theme-dark .view-header-breadcrumb:hover {
+  color: #FFFFFF !important;
+}
+
+
+/* ===== Bottom Status Bar ===== */
+
+.theme-dark .status-bar {
+  color: #E6EDF3 !important;
+}
+
+.theme-dark .status-bar-item {
+  color: #E6EDF3 !important;
+}
+
+.theme-dark .status-bar-item:hover {
+  color: #FFFFFF !important;
+}
+
+
+/* ===== Bottom-left vault/status text ===== */
+
+.theme-dark .status-bar .workspace-drawer-vault-name,
+.theme-dark .status-bar .workspace-drawer-vault-name * {
+  color: #E6EDF3 !important;
+}/* ===== Vault name at bottom-left ===== */
+
+.theme-dark .workspace-drawer-vault-switcher {
+  color: #E6EDF3 !important;
+}
+
+.theme-dark .workspace-drawer-vault-switcher *,
+.theme-dark .workspace-drawer-vault-name {
+  color: #E6EDF3 !important;
+}
+
+/* Icons beside vault name */
+.theme-dark .workspace-drawer-vault-switcher .svg-icon {
+  color: #8B949E !important;
+  stroke: #8B949E !important;
+}
+
+/* Hover */
+.theme-dark .workspace-drawer-vault-switcher:hover,
+.theme-dark .workspace-drawer-vault-switcher:hover * {
+  color: #FFFFFF !important;
+}

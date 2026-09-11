@@ -1,0 +1,45 @@
+/* ================================
+   FULL WIDTH OBSIDIAN NOTES
+   ================================ */
+
+/* Main editor */
+.markdown-source-view.mod-cm6 .cm-sizer {
+  max-width: none !important;
+  width: 100% !important;
+  margin: 0 !important;
+}
+
+/* Text inside editor */
+.markdown-source-view.mod-cm6 .cm-content {
+  max-width: none !important;
+  width: 100% !important;
+}
+
+/* Individual lines */
+.markdown-source-view.mod-cm6 .cm-line {
+  max-width: none !important;
+}
+
+/* Code blocks in Live Preview */
+.markdown-source-view.mod-cm6 .HyperMD-codeblock {
+  max-width: none !important;
+  width: 100% !important;
+}
+
+/* Code block container */
+.markdown-source-view.mod-cm6 .cm-preview-code-block {
+  max-width: none !important;
+  width: 100% !important;
+}
+
+/* Reading view */
+.markdown-preview-view .markdown-preview-sizer {
+  max-width: none !important;
+  width: 100% !important;
+  margin: 0 !important;
+}
+
+.markdown-preview-view pre {
+  max-width: none !important;
+  width: 100% !important;
+}

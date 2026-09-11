@@ -4,7 +4,9 @@
 
 ## Approach summary
 
-### Brute force
+
+
+- ### Brute force
 
 Walk through the list from the head and keep track of the previous node. When the target node is found, connect the previous node to the target's next node. Handle head and tail deletion as separate boundary cases.
 
@@ -25,7 +27,6 @@ Maintain only the pointers needed for the current operation. For head deletion, 
 - Make `temp` point to the current `head`
 - Move `head` to `head->next`
 - Delete `temp`
--
 
 ```cpp
 /*
@@ -102,3 +103,8 @@ https://www.geeksforgeeks.org/problems/deletion-at-the-end-of-a-linked-list/1
 ```
 
 # 3. **Element deletion**
+
+
+
+
+vim mode
