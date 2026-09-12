@@ -1,6 +1,6 @@
 {
   "lastVersion": "4.0.8",
-  "aestheticStyle": "tiny",
+  "aestheticStyle": "custom",
   "positionStyle": "top",
   "menuCommands": [
     {
@@ -411,15 +411,15 @@
   "cMenuFontColor": "#548dd4",
   "cMenuBackgroundColor": "#d3f8b6",
   "autohide": false,
-  "Iscentered": false,
-  "custom_bg1": "#FFB78B8C",
+  "Iscentered": true,
+  "custom_bg1": "#B44E0F8C",
   "custom_bg2": "#CDF4698C",
   "custom_bg3": "#A0CCF68C",
   "custom_bg4": "#F0A7D88C",
   "custom_bg5": "#ADEFEF8C",
   "custom_fc1": "#D83931",
   "custom_fc2": "#DE7802",
-  "custom_fc3": "#245BDB",
+  "custom_fc3": "#1247C2",
   "custom_fc4": "#6425D0",
   "custom_fc5": "#646A73",
   "isLoadOnMobile": false,
@@ -430,10 +430,10 @@
   "viewTypeSettings": {},
   "appearanceByStyle": {
     "top": {
-      "toolbarBackgroundColor": "rgba(var(--background-secondary-rgb), 0.7)",
-      "toolbarIconColor": "var(--text-normal)",
-      "toolbarIconSize": 18,
-      "aestheticStyle": "tiny"
+      "toolbarBackgroundColor": "#1A2F2817",
+      "toolbarIconColor": "#BCB9B2",
+      "toolbarIconSize": 20,
+      "aestheticStyle": "custom"
     },
     "following": {
       "toolbarBackgroundColor": "rgba(var(--background-secondary-rgb), 0.7)",
@@ -454,9 +454,9 @@
       "aestheticStyle": "default"
     }
   },
-  "toolbarBackgroundColor": "rgba(var(--background-secondary-rgb), 0.7)",
-  "toolbarIconColor": "var(--text-normal)",
-  "toolbarIconSize": 18,
+  "toolbarBackgroundColor": "#1A2F2817",
+  "toolbarIconColor": "#BCB9B2",
+  "toolbarIconSize": 20,
   "useCurrentLineForRegex": false,
   "ai": {
     "enabled": false,

@@ -11,12 +11,11 @@
 
      1.[[Longest Substring Without Repeating Characters]]
 
-updated
-new--
 
 ## Brute-force baseline
 
-Try every valid pair, window, or partition of the input and test whether it satisfies the problem condition. This is useful for validating optimized pointer solutions on small inputs.
+Try every valid pair, window, or partition of the input and test whether it satisfies the problem condition. 
+This is useful for validating optimized pointer solutions on small inputs.
 
 **Typical time complexity:** $O(n^2)$
 

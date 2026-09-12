@@ -1,13 +1,8 @@
 {
-  "accentColor": "#76736f",
-  "cssTheme": "GitHub Theme",
-  "enabledCssSnippets": [
-    "wide-notes",
-    "dark_theme"
-  ],
-  "interfaceFontFamily": "Karla",
-  "baseFontSize": 16,
+  "textFontFamily": "cursive,Kalam",
   "baseFontSizeAction": true,
-  "textFontFamily": "Arial Black",
-  "theme": "system"
+  "baseFontSize": 19,
+  "interfaceFontFamily": "Sitka Small",
+  "accentColor": "#0a0a0a",
+  "cssTheme": "Obsidianite"
 }
