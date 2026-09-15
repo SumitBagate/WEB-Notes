@@ -20,7 +20,7 @@ private:
         long long value = sign * num;
 
         if (value < INT_MIN_VAL)
-            return INT_MIN_VAL;
+            return INT_MIN_VAL;  
 
         if (value > INT_MAX_VAL)
             return INT_MAX_VAL;
