@@ -32,7 +32,7 @@ jobs:
 
       - name: Build Quartz
         working-directory: quartz
-        run: npx quartz build
+        run: node ./quartz/bootstrap-cli.mjs build
 
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v5
