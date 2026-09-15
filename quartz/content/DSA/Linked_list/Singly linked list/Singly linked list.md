@@ -1,4 +1,5 @@
-## # Deletion from list
+
+## Deletion from list
 
 **LeetCode practice:** [Remove Linked List Elements - 203](https://leetcode.com/problems/remove-linked-list-elements/), [Remove Nth Node From End of List - 19](https://leetcode.com/problems/remove-nth-node-from-end-of-list/), [Delete Node in a Linked List - 237](https://leetcode.com/problems/delete-node-in-a-linked-list/)
 
@@ -105,6 +106,3 @@ https://www.geeksforgeeks.org/problems/deletion-at-the-end-of-a-linked-list/1
 # 3. **Element deletion**
 
 
-
-
-vim mode
